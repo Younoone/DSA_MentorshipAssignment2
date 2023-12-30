@@ -1,0 +1,33 @@
+import java.util.*;
+public class Pattern17
+{
+    public static void main(String[]args) throws Exception
+    {
+        System.out.println("Enter a no.");
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        for(int i =1;i<=n;i++)
+        {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+            for (int k = 1; k <= 2 * n - 2 * i - 1; k++) {
+                System.out.print(" ");
+            }
+
+            int m = i;
+            if (i == n) {
+                m--;
+            }
+            for (int j = m; j > 0; j--) {
+
+                System.out.print(j);
+            }
+            System.out.println();
+
+        }
+        scn.close();
+        
+    }
+}
